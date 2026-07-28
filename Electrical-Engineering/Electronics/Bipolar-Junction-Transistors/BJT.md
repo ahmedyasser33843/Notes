@@ -140,14 +140,6 @@ This is the fundamental operating principle of a BJT.
 
 ---
 
-<p align="center">
-<img src="https://images.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6ImZyb2FzYS8xNzAyOTM1MTU2MDQzLTQ4LmpwZyIs width="300">
-</p>
-
-<p align="center"><b>Figure 3 — NPN Transistor in Active Region</b></p>
-
----
-
 # Summary
 
 - The Emitter injects charge carriers.
