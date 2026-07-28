@@ -1,150 +1,143 @@
-# Bipolar Junction Transistors (BJT)
+<h1 style="text-align:center;">Bipolar Junction Transistors | BJT</h1>
 
-The **Bipolar Junction Transistor (BJT)** is a semiconductor device used to control a large current using a much smaller current. It consists of **three regions**: the **Emitter**, **Base**, and **Collector**. Each region has unique physical characteristics that contribute to the transistor's operation.
+<h4>
+First, we have the three regions of a Bipolar Junction Transistor (BJT): the
+<strong>Emitter</strong>, <strong>Base</strong>, and <strong>Collector</strong>.
+Each region has distinct characteristics that contribute to the transistor's
+main function: controlling a large collector current using a much smaller base current.
+</h4>
 
----
+<center><h3 style="color:red;">Emitter</h3></center>
 
-## Emitter
-
-The **Emitter** is heavily doped with charge carriers.
-
-- In an **NPN transistor**, it is heavily doped with **electrons**.
-- In a **PNP transistor**, it is heavily doped with **holes**.
-
-Its primary job is to **inject charge carriers into the Base**.
-
----
-
-## Base
-
-The **Base** is the thinnest region of the transistor and is **lightly doped**.
-
-Because it is so thin, only a small number of charge carriers recombine inside it. Most of the carriers injected by the Emitter are able to pass through the Base toward the Collector.
-
-A small current through the Base controls a much larger current flowing between the Collector and the Emitter.
-
----
-
-## Collector
-
-The **Collector** is doped with the same type of semiconductor as the Emitter but is **less heavily doped**.
-
-Its purpose is to collect nearly all of the charge carriers that travel through the Base. It is also physically larger than the other regions to allow it to dissipate heat more effectively.
-
-> **Note**
->
-> Throughout these notes, electrons and holes are treated as if they were two different particles. Physically, holes are simply a convenient way to describe the absence of electrons inside the crystal, but treating them as independent carriers makes understanding semiconductor devices much easier.
-
----
-
-<p align="center">
-<img src="https://circuitcrush.com/wp-content/uploads/BJT-Cross-Section.jpg" width="300">
+<p>
+This region is heavily doped with charge carriers.
+In an <strong>NPN</strong> transistor, it is heavily doped with electrons,
+while in a <strong>PNP</strong> transistor, it is heavily doped with holes.
+Its job is to inject these charge carriers into the Base.
 </p>
 
-<p align="center"><b>Figure 1 — BJT Cross Section</b></p>
+<center><h3 style="color:red;">Base</h3></center>
 
----
-
-# Operating Principle
-
-To understand how an **NPN transistor** works, we first need to understand the two PN junctions inside it.
-
-- **Emitter-Base Junction (EB)**
-- **Collector-Base Junction (CB)**
-
-Each junction behaves like a PN diode.
-
----
-
-## The Emitter-Base Junction
-
-The Emitter is an **N-type** semiconductor while the Base is **P-type**.
-
-When these materials are joined together, electrons and holes diffuse into the opposite material until an electric field forms between them. This creates a **depletion region** with a built-in potential that prevents further diffusion.
-
-Current can only flow if this built-in potential is reduced.
-
-### Forward Bias
-
-The junction is forward biased when
-
-- Positive voltage is applied to the Base.
-- Negative voltage is applied to the Emitter.
-
-This reduces the depletion region and allows current to flow once the applied voltage is sufficiently large.
-
-### Reverse Bias
-
-The junction is reverse biased when the polarity is reversed.
-
-The depletion region widens, preventing current flow except for a very small leakage current.
-
----
-
-<p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Pn-junction-equilibrium-graph.svg" width="300">
+<p>
+The Base is extremely thin and lightly doped with the opposite type of semiconductor.
+Because it is so thin, only a small number of charge carriers recombine inside it,
+allowing most of them to reach the Collector.
+This is why a small Base current can control a much larger Collector current.
 </p>
 
-<p align="center"><b>Figure 2 — PN Junction</b></p>
+<center><h3 style="color:red;">Collector</h3></center>
 
----
+<p>
+The Collector has the same semiconductor type as the Emitter but is less heavily doped.
+It is physically larger than the Emitter because it must collect most of the charge carriers
+coming from the Base and dissipate the heat generated during operation.
+</p>
 
-The **Collector-Base Junction** behaves exactly like another PN junction. The interesting behavior appears when both junctions operate together.
+<blockquote style="color:#8B8000;">
+<strong>Note:</strong> Throughout these notes, I treat electrons and holes as if they were two
+different particles. In reality, holes are simply a convenient way to describe the absence of
+electrons inside the semiconductor crystal, but thinking of them as separate carriers makes
+the transistor much easier to understand.
+</blockquote>
 
----
+<figure>
+<center>
+<img src="https://circuitcrush.com/wp-content/uploads/BJT-Cross-Section.jpg"
+width="300" alt="BJT Cross Section">
+<figcaption>Figure 1</figcaption>
+</center>
+</figure>
 
-## Case 1 — Only the Base-Emitter Junction is Forward Biased
+<center><h2 style="color:red;">Its Function</h2></center>
 
-If only the Base-Emitter junction is forward biased, it behaves exactly like a diode.
+<p>
+To make an <strong>NPN transistor</strong> act as a switch, we first need to understand the
+two PN junctions inside it and how they interact.
+</p>
 
-Current flows through the Base-Emitter junction, but there is no significant Collector current.
+<h3>NPN Junctions</h3>
 
----
+<p>
+Let's start with the <strong>Emitter-Base junction</strong>.
+Since it consists of two oppositely doped semiconductor materials, charge carriers diffuse
+across the junction until an electric field is created. This electric field forms a
+<strong>depletion region</strong> with a built-in potential that prevents any further diffusion.
+</p>
 
-## Case 2 — Only the Collector-Emitter Voltage is Applied
+<p>
+To allow current to flow, this built-in potential must be reduced.
+This is done by <strong>forward biasing</strong> the junction:
+the positive terminal is connected to the P-type material (Base) and the negative terminal
+to the N-type material (Emitter). As a result, the depletion region becomes narrower and
+current can flow once the applied voltage is high enough.
+</p>
 
-Applying a voltage only between the Collector and the Emitter does **not** make the transistor conduct.
+<p>
+If the polarity is reversed (<strong>reverse bias</strong>), the depletion region becomes wider,
+preventing current flow except for a tiny leakage current.
+</p>
 
-At first this may seem surprising.
+<figure>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Pn-junction-equilibrium-graph.svg"
+width="300" alt="PN Junction">
+<figcaption>Figure 2</figcaption>
+</center>
+</figure>
 
-The reason involves semiconductor physics and the behavior of the depletion regions inside the transistor. A deeper explanation requires understanding carrier transport and electric fields inside semiconductor materials.
+<p>
+The <strong>Collector-Base junction</strong> behaves similarly, but something interesting happens
+when both junctions work together.
+</p>
 
-> **Learning Note**
->
-> I searched for a complete explanation here but realized that I first need a stronger background in semiconductor physics. For now, I will simply accept this behavior and revisit it later.
+<h5>Case 1</h5>
 
----
+<p>
+If only the Base-Emitter junction is forward biased (or similarly only the Collector-Base
+junction), then nothing particularly special happens—it simply behaves like a normal diode.
+Current flows only if that junction is forward biased.
+</p>
 
-## Case 3 — Normal Active Operation
+<h5>Case 2</h5>
 
-Now suppose
+<p>
+If a voltage is applied only between the Collector and the Emitter, the transistor still
+doesn't conduct any significant current.
+</p>
 
-- A voltage is applied between the Collector and the Emitter.
-- The Base-Emitter junction is forward biased.
+<blockquote style="color:#8B8000;">
+<strong>Learning Note:</strong><br>
+I kept searching for about an hour trying to understand why this happens, but eventually
+realized that I first need to study semiconductor physics. I was basically trying to learn
+years of semiconductor theory in a couple of hours 😅. For now, I'll simply accept this fact
+and come back to it once I understand semiconductor physics better.
+</blockquote>
 
-The forward-biased Base-Emitter junction injects a large number of electrons into the thin Base.
+<h5>Case 3</h5>
 
-Since
+<p>
+Now things get interesting.
+</p>
 
-- the Base is extremely thin,
-- only lightly doped, and
-- the Collector-Base junction is reverse biased,
+<p>
+If the Collector-Emitter voltage is applied <strong>and</strong> the Base-Emitter junction is
+forward biased, the Emitter injects electrons into the thin Base.
+Because the Base is extremely thin and lightly doped, only a few electrons recombine there.
+Most of them are swept into the Collector by the electric field created by the
+reverse-biased Collector-Base junction.
+</p>
 
-most of these electrons are swept into the Collector by the electric field inside the Collector-Base depletion region.
+<p>
+This is where the transistor starts doing its magic:
+a very small Base current allows a much larger Collector current to flow.
+Increasing the Base current allows more electrons to reach the Collector,
+which increases the Collector current even further.
+</p>
 
-This creates a large Collector current.
-
-A small increase in the Base current allows more charge carriers to enter the Base, producing a much larger increase in the Collector current.
-
-This is the fundamental operating principle of a BJT.
-
----
-
-# Summary
-
-- The Emitter injects charge carriers.
-- The Base controls how many carriers pass through.
-- The Collector collects nearly all of those carriers.
-- A small Base current controls a much larger Collector current.
-- The Base-Emitter junction must be forward biased for normal transistor operation.
-- The Collector-Base junction is reverse biased during active operation.
+<figure>
+<center>
+<img src="https://images.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6ImZyb2FzYS8xNzAyOTM1MTU2MDQzLTQ4LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTUwLCJmaXQiOiJjb3ZlciJ9fX0="
+width="300" alt="NPN Transistor">
+<figcaption>Figure 3</figcaption>
+</center>
+</figure>
